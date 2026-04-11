@@ -56,7 +56,7 @@
 
 ## Stats 📊
 
-![Elvish064's GitHub Stats](https://readme-stats-github.pages.dev/api?username=Elvish064&theme=dark) ![Top Languages](https://readme-stats-github.pages.dev/api/top-langs?username=Elvish064&theme=dark)
+![Elvish064's GitHub stats](https://github-stats-card-generator.vercel.app/api/svg?username=Elvish064&theme=default&chart=bars) ![Elvish064's Contribution stats](https://github-stats-card-generator.vercel.app/api/svg?username=Elvish064&type=contributions&theme=default)
 
 
 
