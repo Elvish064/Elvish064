@@ -52,11 +52,16 @@
   <a href="https://developer.mozilla.org/en-US/docs/Web/arduino" target="_blank" rel="noreferrer"> <img src="https://skillicons.dev/icons?i=arduino" alt="arduino" width="40" height="40"/> </a> 
 </p>
 
+
 ---
 
 ## Stats 📊
 
 ![Elvish064's GitHub stats](https://github-stats-card-generator.vercel.app/api/svg?username=Elvish064&theme=default&chart=bars) ![Elvish064's Contribution stats](https://github-stats-card-generator.vercel.app/api/svg?username=Elvish064&type=contributions&theme=default)
+
+<br><br> <div align="right">
+  <img src="./sign.svg" width="200" alt="Animated Signature">
+</div>
 
 
 
