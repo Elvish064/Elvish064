@@ -1,24 +1,26 @@
 <svg width="286" height="101" viewBox="0 0 286 101" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
-    /* 1. 名字主体动画剧本 (周期定为 9s) */
+    /* 1. 名字主体动画剧本：加速完成 */
     @keyframes write-main-body {
-      0%, 5%    { stroke-dashoffset: 1; opacity: 0; } /* 0%-5%: 初始隐藏状态 */
-      10%       { opacity: 1; }                       /* 微微淡入，防止边缘机器感生硬 */
-      50%       { stroke-dashoffset: 0; }             /* 50%: 书写结束！这里耗时约 4.5s */
-      50%, 85%  { stroke-dashoffset: 0; opacity: 1; } /* 50%-85%: 停留在屏幕上展示给观众看 (停留约3.15s) */
-      95%, 100% { stroke-dashoffset: -1; opacity: 0; } /* 优雅地向左“擦除”退场 */
+      0%, 5%    { stroke-dashoffset: 1; opacity: 0; }
+      8%        { opacity: 1; }
+      40%       { stroke-dashoffset: 0; }             /* 40% 时干净利落写完，绝不拖泥带水 */
+      40%, 85%  { stroke-dashoffset: 0; opacity: 1; } /* 保持展示状态 */
+      95%, 100% { stroke-dashoffset: -1; opacity: 0; } /* 向左擦除退场 */
     }
 
-    /* 2. 圆圈点动画剧本 (同一个 9s 周期) */
+    /* 2. 圆圈点动画剧本：拉长画圈过程 */
     @keyframes write-dot-circle {
-      0%, 45%   { stroke-dashoffset: 1; opacity: 0; } /* 0%-45%: 潜伏不动，等主体先写 */
-      50%, 85%  { stroke-dashoffset: 0; opacity: 1; } /* 50%: 瞬间画出圆圈点！(耗时约0.5s) */
-      95%, 100% { stroke-dashoffset: -1; opacity: 0; } /* 和主体同步擦除退场 */
+      0%, 39%   { stroke-dashoffset: 1; opacity: 0; } /* 前面安静等待主体写完 */
+      40%       { stroke-dashoffset: 1; opacity: 1; } /* 40% 准时显现画笔准备开始 */
+      55%       { stroke-dashoffset: 0; opacity: 1; } /* 给足 15% 的进度(约1.35秒)去慢慢画完一圈 */
+      55%, 85%  { stroke-dashoffset: 0; opacity: 1; } /* 画完和主体一起保持展示 */
+      95%, 100% { stroke-dashoffset: -1; opacity: 0; } /* 同步擦除退场 */
     }
 
     /* 基础画笔样式 */
     .pen-stroke {
-      stroke: #e5e5e5;      /* 保留你设置的浅灰色画笔 */
+      stroke: #e5e5e5;      
       stroke-width: 4px;
       stroke-linecap: round;
       stroke-linejoin: round;
@@ -29,12 +31,12 @@
       stroke-dashoffset: 1; 
     }
 
-    /* 应用主体循环动画：9秒一轮，无限循环 (infinite) */
+    /* 主笔画：改用 ease-in-out，让头尾顺滑且结尾干脆 */
     .main-body {
-      animation: write-main-body 9s cubic-bezier(0.35, 0, 0.15, 1) infinite;
+      animation: write-main-body 9s ease-in-out infinite;
     }
 
-    /* 应用圆点循环动画：9秒一轮，无限循环 (infinite) */
+    /* 圆圈点：使用 ease-out 让画圈的过程像真实落笔一样自然停顿 */
     .dot-circle {
       animation: write-dot-circle 9s ease-out infinite;
     }
