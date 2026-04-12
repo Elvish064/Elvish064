@@ -1,14 +1,24 @@
 <svg width="286" height="101" viewBox="0 0 286 101" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
-    /* 核心绘制动画 */
-    @keyframes draw {
-      from { stroke-dashoffset: 1; }
-      to   { stroke-dashoffset: 0; }
+    /* 1. 名字主体动画剧本 (周期定为 9s) */
+    @keyframes write-main-body {
+      0%, 5%    { stroke-dashoffset: 1; opacity: 0; } /* 0%-5%: 初始隐藏状态 */
+      10%       { opacity: 1; }                       /* 微微淡入，防止边缘机器感生硬 */
+      50%       { stroke-dashoffset: 0; }             /* 50%: 书写结束！这里耗时约 4.5s */
+      50%, 85%  { stroke-dashoffset: 0; opacity: 1; } /* 50%-85%: 停留在屏幕上展示给观众看 (停留约3.15s) */
+      95%, 100% { stroke-dashoffset: -1; opacity: 0; } /* 优雅地向左“擦除”退场 */
+    }
+
+    /* 2. 圆圈点动画剧本 (同一个 9s 周期) */
+    @keyframes write-dot-circle {
+      0%, 45%   { stroke-dashoffset: 1; opacity: 0; } /* 0%-45%: 潜伏不动，等主体先写 */
+      50%, 85%  { stroke-dashoffset: 0; opacity: 1; } /* 50%: 瞬间画出圆圈点！(耗时约0.5s) */
+      95%, 100% { stroke-dashoffset: -1; opacity: 0; } /* 和主体同步擦除退场 */
     }
 
     /* 基础画笔样式 */
     .pen-stroke {
-      stroke: #e5e5e5;      /* 纯白画笔，适合 GitHub 深色模式 */
+      stroke: #e5e5e5;      /* 保留你设置的浅灰色画笔 */
       stroke-width: 4px;
       stroke-linecap: round;
       stroke-linejoin: round;
@@ -19,14 +29,14 @@
       stroke-dashoffset: 1; 
     }
 
-    /* 主体签名动画：耗时 5 秒 */
+    /* 应用主体循环动画：9秒一轮，无限循环 (infinite) */
     .main-body {
-      animation: draw 4.5s cubic-bezier(0.35, 0, 0.15, 1) forwards;
+      animation: write-main-body 9s cubic-bezier(0.35, 0, 0.15, 1) infinite;
     }
 
-    /* 圆圈点动画：耗时 0.5 秒，但要等待(delay) 4.5 秒后才开始！ */
+    /* 应用圆点循环动画：9秒一轮，无限循环 (infinite) */
     .dot-circle {
-      animation: draw 0.5s ease-out 4.5s forwards;
+      animation: write-dot-circle 9s ease-out infinite;
     }
   </style>
 
