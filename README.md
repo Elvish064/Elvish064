@@ -3,10 +3,8 @@
 ## About Me 🖖
 * Hi there! I'm **Elvish**. 
 *  I'm a passionate developer and tech enthusiast, constantly exploring the vast world of programming and self-hosting.
-*  On my GitHub, you'll find various projects covering web development, API integrations, homelab automation, and serverless projects.
 *  My daily driver is Windows, but I spend a lot of time tinkering with Ubuntu servers.
 *  In my free time, I love playing games , photography. I also enjoy anime, light novels, and music!
-
 
 ## Currently Learning & Working On 💻
 
@@ -14,7 +12,6 @@
 *  Diving deep into **Homelab & Self-hosting** (managing Docker, Home Assistant, and IoT).
 *  Exploring and integrating **AI Model APIs** to build custom relay servers and smart automations.
 *  Enhancing my **Linux** server administration, network security, and backend development skills.
-*  Solidifying my foundation in database technologies like **MySQL**, **MongoDB**.
 
 ## Languages and Tools 🛠️
 
