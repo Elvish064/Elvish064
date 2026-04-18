@@ -1,24 +1,23 @@
-<svg width="286" height="101" viewBox="0 0 286 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="296" height="118" viewBox="-5 -12 296 118" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
-    /* 1. 名字主体动画剧本：加速完成 */
+
     @keyframes write-main-body {
       0%, 5%    { stroke-dashoffset: 1; opacity: 0; }
       8%        { opacity: 1; }
-      40%       { stroke-dashoffset: 0; }             /* 40% 时干净利落写完，绝不拖泥带水 */
-      40%, 85%  { stroke-dashoffset: 0; opacity: 1; } /* 保持展示状态 */
-      95%, 100% { stroke-dashoffset: -1; opacity: 0; } /* 向左擦除退场 */
+      40%       { stroke-dashoffset: 0; }             
+      40%, 85%  { stroke-dashoffset: 0; opacity: 1; } 
+      95%, 100% { stroke-dashoffset: -1; opacity: 0; } 
     }
 
-    /* 2. 圆圈点动画剧本：拉长画圈过程 */
+
     @keyframes write-dot-circle {
-      0%, 39%   { stroke-dashoffset: 1; opacity: 0; } /* 前面安静等待主体写完 */
-      40%       { stroke-dashoffset: 1; opacity: 1; } /* 40% 准时显现画笔准备开始 */
-      55%       { stroke-dashoffset: 0; opacity: 1; } /* 给足 15% 的进度(约1.35秒)去慢慢画完一圈 */
-      55%, 85%  { stroke-dashoffset: 0; opacity: 1; } /* 画完和主体一起保持展示 */
-      95%, 100% { stroke-dashoffset: -1; opacity: 0; } /* 同步擦除退场 */
+      0%, 39%   { stroke-dashoffset: 1; opacity: 0; } 
+      40%       { stroke-dashoffset: 1; opacity: 1; } 
+      55%       { stroke-dashoffset: 0; opacity: 1; } 
+      55%, 85%  { stroke-dashoffset: 0; opacity: 1; } 
+      95%, 100% { stroke-dashoffset: -1; opacity: 0; } 
     }
 
-    /* 基础画笔样式 */
     .pen-stroke {
       stroke: #e5e5e5;      
       stroke-width: 4px;
@@ -26,17 +25,15 @@
       stroke-linejoin: round;
       fill: none;
       
-      /* 利用 pathLength="1" 魔法按比例缩放长度 */
+
       stroke-dasharray: 1 2;
       stroke-dashoffset: 1; 
     }
 
-    /* 主笔画：改用 ease-in-out，让头尾顺滑且结尾干脆 */
     .main-body {
       animation: write-main-body 9s ease-in-out infinite;
     }
 
-    /* 圆圈点：使用 ease-out 让画圈的过程像真实落笔一样自然停顿 */
     .dot-circle {
       animation: write-dot-circle 9s ease-out infinite;
     }
