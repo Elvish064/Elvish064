@@ -45,12 +45,12 @@
             dashoffset 1 -> 0.45 happens early; the remaining strokes slow down slightly.
           -->
           <animate attributeName="stroke-dashoffset"
-                   dur="4.8s"
+                   dur="4.9s"
                    repeatCount="indefinite"
                    values="1;1;0;0;1;1"
-                   keyTimes="0;0.05;0.50;0.88;0.975;1"
+                   keyTimes="0;0.04;0.34;0.75;0.965;1"
                    calcMode="spline"
-                   keySplines="0.22 0 0.12 1;0.22 0 0.12 1;0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1"/>
+                   keySplines="0.18 0 0.10 1;0.18 0 0.10 1;0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1"/>
         </path>
       </g>
     </mask>
@@ -58,10 +58,10 @@
 
   <g opacity="1">
     <animate attributeName="opacity"
-             dur="4.8s"
+             dur="4.9s"
              repeatCount="indefinite"
              values="1;1;0.18;0;1"
-             keyTimes="0;0.88;0.965;0.975;1"/>
+             keyTimes="0;0.75;0.94;0.965;1"/>
 
     <g mask="url(#signature-reveal)">
       <g transform="translate(0,1122) scale(0.1,-0.1)">
@@ -111,10 +111,10 @@ m-2101 -1283 c7 -7 12 -23 12 -36 0 -31 -96 -125 -172 -170 -72 -42 -278 -135
       <path class="signature-dot" opacity="0" d="M7873 6020 c-59 -36 -79 -90 -42 -113 34 -21 139 45 139 87 0 47 -43
 59 -97 26z">
         <animate attributeName="opacity"
-                 dur="4.8s"
+                 dur="4.9s"
                  repeatCount="indefinite"
                  values="0;0;1;1;0.18;0"
-                 keyTimes="0;0.43;0.50;0.88;0.965;1"/>
+                 keyTimes="0;0.27;0.33;0.75;0.94;1"/>
       </path>
     </g>
   </g>
