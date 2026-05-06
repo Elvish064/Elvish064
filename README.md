@@ -17,7 +17,7 @@
 
 <h4 align="left">Front-End</h4>
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=html,css,js,ts,vue,astro" />
+  <img src="https://skillicons.dev/icons?i=html,css,js,ts,vue,astro,nuxt" />
 </p>
 
 <h4 align="left">Back-End</h4>
@@ -32,7 +32,7 @@
 
 <h4 align="left">Tools & Infrastructure</h4>
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=linux,bash,docker,git,azure,androidstudio,arduino" />
+  <img src="https://skillicons.dev/icons?i=linux,bash,docker,git,azure,androidstudio,arduino,vscode" />
 </p>
 
 ---
