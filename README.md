@@ -1,5 +1,7 @@
 # Elvish
 
+<img src="./me.svg" width="592" alt="About me">
+
 ## About Me 🖖
 * Hi there! I'm **Elvish**. 
 *  I'm a passionate developer and tech enthusiast, constantly exploring the vast world of programming and self-hosting.
